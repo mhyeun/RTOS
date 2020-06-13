@@ -108,7 +108,7 @@
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
         <sDlgPa></sDlgPa>
-        <sIfile></sIfile>
+        <sIfile>.\BoardSimulator.Ini</sIfile>
         <tDll></tDll>
         <tDllPa></tDllPa>
         <tDlgDll></tDlgDll>
@@ -142,35 +142,128 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>143</LineNumber>
+          <LineNumber>131</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>2162</Address>
+          <Address>228</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\bst.c</Filename>
+          <Filename>RTE\Device\LPC1768\startup_LPC17xx.s</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Lab1\bst.c\143</Expression>
+          <Expression>\\Lab2\RTE/Device/LPC1768/startup_LPC17xx.s\131</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>497</LineNumber>
+          <EnabledFlag>0</EnabledFlag>
+          <Address>2722</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>RTE\Device\LPC1768\system_LPC17xx.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Lab2\RTE/Device/LPC1768/system_LPC17xx.c\497</Expression>
         </Bp>
       </Breakpoint>
-      <WatchWindow1>
-        <Ww>
-          <count>0</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>size</ItemText>
-        </Ww>
-      </WatchWindow1>
-      <MemoryWindow1>
-        <Mm>
-          <WinNumber>1</WinNumber>
-          <SubType>0</SubType>
-          <ItemText>0x10000760</ItemText>
-          <AccSizeX>0</AccSizeX>
-        </Mm>
-      </MemoryWindow1>
+      <ToolboxButtons>
+        <Wi>
+          <IntNumber>0</IntNumber>
+          <FirstString>Show LEDs</FirstString>
+          <SecondString>ShowLEDs()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>1</IntNumber>
+          <FirstString>Button down</FirstString>
+          <SecondString>ButtonDown()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>2</IntNumber>
+          <FirstString>Button up</FirstString>
+          <SecondString>ButtonUp()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>3</IntNumber>
+          <FirstString>Joystick Press</FirstString>
+          <SecondString>JoystickPress()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>4</IntNumber>
+          <FirstString>Joystick Release</FirstString>
+          <SecondString>JoystickRelease()</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>5</IntNumber>
+          <FirstString>Joystick North</FirstString>
+          <SecondString>JoystickBit(23)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>6</IntNumber>
+          <FirstString>Joystick South</FirstString>
+          <SecondString>JoystickBit(25)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>7</IntNumber>
+          <FirstString>Joystick East</FirstString>
+          <SecondString>JoystickBit(24)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>8</IntNumber>
+          <FirstString>Joystick West</FirstString>
+          <SecondString>JoystickBit(26)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>9</IntNumber>
+          <FirstString>Joystick Centre</FirstString>
+          <SecondString>JoystickBit(0)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>10</IntNumber>
+          <FirstString>Analog 0.0v</FirstString>
+          <SecondString>AnalogValue(0)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>11</IntNumber>
+          <FirstString>Analog 0.5v</FirstString>
+          <SecondString>AnalogValue(0.5)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>12</IntNumber>
+          <FirstString>Analog 1.0v</FirstString>
+          <SecondString>AnalogValue(1.0)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>13</IntNumber>
+          <FirstString>Analog 1.5v</FirstString>
+          <SecondString>AnalogValue(1.5)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>14</IntNumber>
+          <FirstString>Analog 2.0v</FirstString>
+          <SecondString>AnalogValue(2.0)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>15</IntNumber>
+          <FirstString>Analog 2.5v</FirstString>
+          <SecondString>AnalogValue(2.5)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>16</IntNumber>
+          <FirstString>Analog 3.0v</FirstString>
+          <SecondString>AnalogValue(3.0)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>17</IntNumber>
+          <FirstString>Analog 3.5v</FirstString>
+          <SecondString>AnalogValue(3.5)</SecondString>
+        </Wi>
+      </ToolboxButtons>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -180,7 +273,7 @@
         <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>1</aSer1>
-        <aSer2>0</aSer2>
+        <aSer2>1</aSer2>
         <aPa>0</aPa>
         <viewmode>1</viewmode>
         <vrSel>0</vrSel>
@@ -189,13 +282,13 @@
         <AscS1>0</AscS1>
         <AscS2>0</AscS2>
         <AscS3>0</AscS3>
-        <aSer3>0</aSer3>
+        <aSer3>1</aSer3>
         <eProf>0</eProf>
         <aLa>0</aLa>
         <aPa1>0</aPa1>
         <AscS4>0</AscS4>
-        <aSer4>0</aSer4>
-        <StkLoc>1</StkLoc>
+        <aSer4>1</aSer4>
+        <StkLoc>0</StkLoc>
         <TrcWin>0</TrcWin>
         <newCpu>0</newCpu>
         <uProt>0</uProt>
@@ -236,8 +329,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\bst.c</PathWithFileName>
-      <FilenameWithoutPath>bst.c</FilenameWithoutPath>
+      <PathWithFileName>.\Retarget.c</PathWithFileName>
+      <FilenameWithoutPath>Retarget.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -248,8 +341,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\p1_main.c</PathWithFileName>
-      <FilenameWithoutPath>p1_main.c</FilenameWithoutPath>
+      <PathWithFileName>.\uart.c</PathWithFileName>
+      <FilenameWithoutPath>uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -260,20 +353,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Retarget.c</PathWithFileName>
-      <FilenameWithoutPath>Retarget.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>4</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\uart.c</PathWithFileName>
-      <FilenameWithoutPath>uart.c</FilenameWithoutPath>
+      <PathWithFileName>.\main.c</PathWithFileName>
+      <FilenameWithoutPath>main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -289,7 +370,7 @@
 
   <Group>
     <GroupName>::Device</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>1</RteFlg>
