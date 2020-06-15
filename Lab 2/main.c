@@ -33,11 +33,11 @@ int main() {
 			
 			if (button_pushed == 0) {
 				printf("Button pushed\n");
-				LPC_GPIO1->FIOSET |= (1 << 28); // to change LED, change GPIO port and bit translation (in case we get asked by TA for lab demo)
+				LPC_GPIO2->FIOSET |= (1 << 6); // to change LED, change GPIO port and bit translation
 			}
 			else {
 				printf("Button not pushed\n");
-				LPC_GPIO1->FIOCLR |= (1 << 28);
+				LPC_GPIO2->FIOCLR |= (1 << 6); // change this one too
 			}
 		}
 }
@@ -45,7 +45,7 @@ int main() {
 #elif part == 2
 int main() {
 	while(true) {
-		int joystick_pressed = (LPC_GPIO1->FIOPIN & 0x100000); //20th pin (Cntr)
+		int joystick_pressed = (LPC_GPIO1->FIOPIN & 0x100000); //20th pin (Centre)
 		
 		int joystick_north = (LPC_GPIO1->FIOPIN & 0x800000); // 23rd pin (1 with 23 following 0s) (A)
 		int joystick_east = (LPC_GPIO1->FIOPIN & 0x1000000); // 24th pin (B)
@@ -110,6 +110,7 @@ int main() {
 		// e.g. "9" -> 57 in ASCII, so subtract 48 to get 9
 		int num = atoi(str);
 		if (num > 255 || num < 0){
+			printf("Invalid input. Please try again.\n");
 			continue;
 		}
 		
@@ -130,7 +131,32 @@ int main() {
 }
 
 #else
-int main() {
-	
+float convert(float adc_value) {
+		// conversion is 1/1241, since 1V input reads 1241 analog
+		return roundf((adc_value / 1241) * 100) / 100;
 }
+
+int main() {
+	// PCONP by setting bit 12
+	LPC_SC->PCONP |= (1 << 12); 
+
+	// PINSEL, from slides
+	LPC_PINCON->PINSEL1 &= ~(0x3 << 18); // clear bits 18, 19
+	LPC_PINCON->PINSEL1 |=  (0x1 << 18); // set bit 18 = AD0.2
+
+	// ADCR
+	LPC_ADC->ADCR = (1 <<  2) |  // turn on analog input bit 2
+	                (4 <<  8) |  // bit 8..15 sets clock divisor: 4 + 1 = 5,  25MHz / 5 = 5MHz     
+	                (1 << 21);   // enable ADCR circuitry
+	
+	// reading
+	while(true)
+	{
+		LPC_ADC->ADCR |= (1 << 24); // start conversion
+    while((LPC_ADC->ADGDR & 0x80000000) == 0); // checking if bit 31 of ADGDR is set
+    uint16_t ADC_Value = ((LPC_ADC->ADGDR & 0xFFF0) >> 4); // extract bits 15...4 of LPC_ADC->ADGDR;
+    printf("value: %f\n", convert(ADC_Value));
+	}
+}
+
 #endif
