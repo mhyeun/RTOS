@@ -77,8 +77,6 @@ int main() {
 	}
 }
 
-// X_XX ____
-
 #elif part == 3
 int main() {
 		// set bits to output
@@ -154,8 +152,8 @@ int main() {
 	{
 		LPC_ADC->ADCR |= (1 << 24); // start conversion
     while((LPC_ADC->ADGDR & 0x80000000) == 0); // checking if bit 31 of ADGDR is set
-    uint16_t ADC_Value = ((LPC_ADC->ADGDR & 0xFFF0) >> 4); // extract bits 15...4 of LPC_ADC->ADGDR;
-    printf("value: %f\n", convert(ADC_Value));
+    uint16_t ADC_Value = ((LPC_ADC->ADGDR & 0xFFF0) >> 4); // extract bits 15...4 of LPC_ADC->ADGDR, 12 1's = 4095 base 10 ;
+    printf("Value: %f\n", convert(ADC_Value));
 	}
 }
 
