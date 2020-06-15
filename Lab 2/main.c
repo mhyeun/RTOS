@@ -1,3 +1,10 @@
+/* MTE 241: Lab 2
+*
+*	 Authors:
+*	 1. Matthew Hyeun (20774652)
+*	 2. Jason Tiou-Fat (20765871)
+*/
+
 #include <LPC17xx.h>
 #include <stdbool.h>
 #include <stdio.h>
