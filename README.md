@@ -1,5 +1,5 @@
 # MTE241-RTOS
-Lab and test code for MTE241: Computer Structures and Real-Time Operating Systems.
+Lab code for MTE241: Computer Structures and Real-Time Operating Systems.
 
 Lab work completed with @jehtiouf.
 
