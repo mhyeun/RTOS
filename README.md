@@ -12,3 +12,6 @@ Lab work completed with @jehtiouf.
 - Reading inputs of a joystick's position (north, east, south, west, centre) and button status (pressed, not pressed)
 - Reading in a string from a serial port representing a decimal number from 0 to 255, and displaying it on LEDs as a binary number
 - Reading a value of analog to digital converter and printing value as a decimal number
+
+### Lab 3: Multithreading
+- Implement Lab 2 using multithreading with osKernel from cmsis_os
