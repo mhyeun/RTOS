@@ -15,3 +15,6 @@ Lab work completed with @jehtiouf.
 
 #### Lab 3: Multithreading
 - Implement Lab 2 using multithreading with osKernel from cmsis_os
+
+#### Lab 4: Message Queues
+- Implement a scalable client-server message queue (inter-process communication)
